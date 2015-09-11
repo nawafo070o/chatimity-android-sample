@@ -16,7 +16,7 @@ public class HelloWorldApplication extends Application {
                         .showPics(true)
                         .showNicePoints(true)
                         .themeColor(R.color.theme_color)
-                        .admobBannerAdUnitId("928f2f0df4014457")
+                        .admobBannerAdUnitId(null)  // Set it to your ad unit id (Optional)
                         .build());
     }
 }
