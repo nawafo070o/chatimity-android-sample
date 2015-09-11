@@ -6,11 +6,12 @@
 *.swp
 *.swo
 *.swm
+*.swi
+*.swj
 *.swk
 *.swl
 *.swn
-*.swj
-*.swi
+*.swo
 *.swh
 build/
 dist/
