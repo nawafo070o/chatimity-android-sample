@@ -22,3 +22,19 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+#
+# Proguard changes for Chatimity. Related to Gson, EventBus, okhttp and volley.
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class sun.misc.Unsafe { *; }
+-keep class com.chatimity.android.chatimity.models.** { *; }
+-keep class org.apache.http.message.BasicNameValuePair { *; }
+-keep class org.apache.http.NameValuePair { *; }
+-keep class org.apache.http.client.params.HttpClientParams { *; }
+-dontwarn com.google.common.**
+-dontwarn org.apache.**
+-dontwarn okio.**
+-dontwarn com.android.volley.**
+-keepclassmembers class ** {
+    public void onEvent*(**);
+}
