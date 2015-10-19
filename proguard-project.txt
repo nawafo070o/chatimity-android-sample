@@ -37,4 +37,38 @@
 -dontwarn com.android.volley.**
 -keepclassmembers class ** {
     public void onEvent*(**);
-}
+}ة.
+
+إصدارات / الإعدادات:
+سكالا الجرار: 2.8.0 Beta1 (من
+http://www.scala-lang.org/downloads/distrib/files/scala-2.8.0.Beta1-prerelease.zip)
+
+DX: الإصدار 1.3 (المنصات / الروبوت 7 / الأدوات) التي تعمل مع -Xmx2000M
+نظام التشغيل: يندوز فيستا 64 بت
+جافا: الأحد 64 بت VM، 1.6.0_16-B01
+
+ 	output.txt 
+625 KB   مشاهدة   تحميل
+ 	dx.bat 
+2.6 KB   تحميل
+14 مارس 2010 عضو المشروع  رقم 1 ه ... @ google.com
+(تم إدخالها لا تعليق على هذا التغيير.)
+العلامات: عنصر في Dalvik 
+15 مارس 2010 # 2 الدنف ... @ google.com
+يمكنك إضافة خيار "--debug" ثم إعادة التشغيل؟ والتي تسبب DX لتنبعث كامل
+تتبع المكدس لهذه المشكلة.
+15 مارس 2010 # 3 maciek.m ... @ gmail.com
+ها أنت ذا:
+
+مشكلة الكتابة الإخراج:
+com.android.dx.util.ExceptionWithContext: تنسيق == لاغية
+        في
+com.android.dx.util.ExceptionWithContext.withContext (ExceptionWithContext.java:46)
+        في com.android.dx.dex.file.MixedItemSection.placeItems (MixedItemSection.java:321)
+        في com.android.dx.dex.file.DexFile.toDex0 (DexFile.java:525)
+        في com.android.dx.dex.file.DexFile.toDex (DexFile.java:196)
+        في com.android.dx.command.dexer.Main.writeDex (Main.java:434)
+        في com.android.dx.command.dexer.Main.run (Main.java:143)
+        في com.android.dx.command.dexer.Main.main (Main.java:120)
+        في com.android.dx.command.Main.main (Main.java:89)
+سببها: java.lang.NullPointerException
